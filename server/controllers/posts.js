@@ -13,8 +13,9 @@ export const getPosts = async (req,res) => {
     }
 }
 export const createPosts = async (req,res) => {
-    const post = req.body;
     
+    const post = req.body;
+    console.log('1234')
     const newPost = new postMessage(post);
     try{
         await newPost.save();
